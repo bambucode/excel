@@ -17,7 +17,8 @@ class NumFormatMaintainer {
 
   void add(int numFmtId, CustomNumFormat format) {
     if (_map.containsKey(numFmtId)) {
-      throw Exception('numFmtId $numFmtId already exists');
+      return;
+      //throw Exception('numFmtId $numFmtId already exists');
     }
     if (numFmtId < _firstCustomFmtId) {
       // throw Exception(
